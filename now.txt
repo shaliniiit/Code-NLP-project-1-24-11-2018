@@ -1,0 +1,146 @@
+l=[]
+i=3
+while i<10:
+    filename=r"C:\Users\Shalini\Desktop\hub\Bengali300.clusters.minsize5-1000-sum-score-20.sense_vectors.00"+str(i)+".txt"
+    with open(filename, encoding="utf-8") as f:
+        lines = f.readlines()
+        print(len(lines))
+        for item in lines:
+            l.append(item)
+    i+=1
+
+
+
+print(len(l))  
+
+i=10
+while i<30:
+    filename=r"C:\Users\Shalini\Desktop\hub\Bengali300.clusters.minsize5-1000-sum-score-20.sense_vectors.0"+str(i)+".txt"
+    with open(filename, encoding="utf-8") as f:
+        lines = f.readlines()
+        print(len(lines))
+        for item in lines:
+            l.append(item)
+    i+=1
+print(len(l))
+
+
+i=30
+while i<50:
+    filename=r"C:\Users\Shalini\Desktop\hub\Bengali300.clusters.minsize5-1000-sum-score-20.sense_vectors.0"+str(i)+".txt"
+    with open(filename, encoding="utf-8") as f:
+        lines = f.readlines()
+        print(len(lines))
+        for item in lines:
+            l.append(item)
+    i+=1
+print(len(l))
+
+i=50
+while i<80:
+    filename=r"C:\Users\Shalini\Desktop\hub\Bengali300.clusters.minsize5-1000-sum-score-20.sense_vectors.0"+str(i)+".txt"
+    with open(filename, encoding="utf-8") as f:
+        lines = f.readlines()
+        print(len(lines))
+        for item in lines:
+            l.append(item)
+    i+=1
+print(len(l))
+
+i=80
+while i<100:
+    filename=r"C:\Users\Shalini\Desktop\hub\Bengali300.clusters.minsize5-1000-sum-score-20.sense_vectors.0"+str(i)+".txt"
+    with open(filename, encoding="utf-8") as f:
+        lines = f.readlines()
+        print(len(lines))
+        for item in lines:
+            l.append(item)
+    i+=1
+print(len(l))
+
+i=100
+while i<110:
+    filename=r"C:\Users\Shalini\Desktop\hub\Bengali300.clusters.minsize5-1000-sum-score-20.sense_vectors."+str(i)+".txt"
+    with open(filename, encoding="utf-8") as f:
+        lines = f.readlines()
+        print(len(lines))
+        for item in lines:
+            l.append(item)
+    i+=1
+print(len(l))
+
+j=0
+res=[]
+while(j<len(l)):
+    str=''
+    str=''.join(l[j])
+    str=str.split(' ')
+    q=[]
+    q.append(str)
+    w=[]
+    for item in q[0]:
+        w.append(item)
+    res.append(w[0])
+    print(j)
+    j+=1
+
+
+
+
+
+
+
+
+a=[]
+h='???'
+for item in res:
+    if h in item:
+        a.append(res.index(item))
+print(a)
+
+
+
+for j in a:
+    print(res[j])
+
+
+
+
+
+
+print(res.index('??????#1'))
+
+
+
+
+
+
+
+
+
+st=''.join(l[87223])
+st=st.split(' ')
+d=[]
+so=[]
+d.append(st)
+for i in d[0]:
+    so.append(i)
+print(len(so))
+
+
+
+
+
+
+for item in res:
+    if item=='':
+        print(res.index(item))
+
+
+
+
+
+
+print(res[80899])
+
+print(so)

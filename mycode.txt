@@ -1,0 +1,61 @@
+// to upload medicine names in english from csv file and bengali from vec file
+import pandas as pd
+df = pd.read_csv('C:/Users/Shalini/Downloads/dddd.csv', encoding="utf-8")
+l=[]
+l=list(df)
+print(l)
+
+
+p=[]
+c=7
+str=''
+while(c<58):
+    str=''.join(l[c])
+    str=str.split('--')
+    p.append(str)
+    c+=1
+c=0
+while(c<51):
+    if len(p[c])==2:
+        p[c][0]=p[c][0].strip(' ')
+        p[c][1]=p[c][1].strip(' ')
+        print(p[c][0])
+        print(p[c][1])
+    c+=1
+
+
+with open('C:/Users/Shalini/Downloads/wiki.bn.vec', encoding="utf-8") as f:
+    lines=f.readlines()
+    l=[]
+    l.append(lines)
+    c=0
+    st=''
+    a=[]
+    while(c<145351):
+        st=''.join(l[0][c])
+        st=st.split(' ')
+        a.append(st)
+        c+=1
+d={}
+c=0
+while(c<145351):
+    d[a[c][0]]=a[1:300]
+    c+=1
+l1=[]
+l1=d[p[1][0]]
+l2=[]
+l2=d[p[1][1]]
+import math
+sum=0.0
+mod1=mod2=0.0
+c=0
+while(c<300):
+    sum+=float(l1[c])*float(l2[c])
+    mod1+=float(l1[c])*float(l1[c])
+    mod2+=float(l2[c])*float(l2[c])
+    c+=1
+print(sum/(math.sqrt(mod1)*math.sqrt(mod2)))
+
+
+from scipy.stats import spearmanr
+coef,p = spearmanr(a,b)
